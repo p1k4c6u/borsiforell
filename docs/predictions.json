@@ -1,1 +1,119 @@
-{"generated_at": null, "date": null, "stocks_analyzed": 0, "buys": [], "shorts": []}
+{
+  "generated_at": "2026-02-20T20:11:42Z",
+  "date": "2026-02-20",
+  "stocks_analyzed": 49,
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "score": 0.637,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Strong momentum",
+      "ret_3d": 0.0433,
+      "rsi_5": 56.3,
+      "vol_spike": 0.83
+    },
+    {
+      "rank": 2,
+      "ticker": "IBM",
+      "score": 0.5594,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "RSI oversold",
+      "ret_3d": -0.0026,
+      "rsi_5": 26.5,
+      "vol_spike": 0.42
+    },
+    {
+      "rank": 3,
+      "ticker": "UNH",
+      "score": 0.5294,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "Mixed signals",
+      "ret_3d": 0.0027,
+      "rsi_5": 58.4,
+      "vol_spike": 0.38
+    },
+    {
+      "rank": 4,
+      "ticker": "GOOGL",
+      "score": 0.5251,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "Strong momentum",
+      "ret_3d": 0.0471,
+      "rsi_5": 60.8,
+      "vol_spike": 0.91
+    },
+    {
+      "rank": 5,
+      "ticker": "META",
+      "score": 0.5152,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "Mixed signals",
+      "ret_3d": 0.027,
+      "rsi_5": 54.0,
+      "vol_spike": 0.64
+    }
+  ],
+  "shorts": [
+    {
+      "rank": 1,
+      "ticker": "ABBV",
+      "score": 0.3606,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Mixed signals",
+      "ret_3d": -0.0288,
+      "rsi_5": 49.7,
+      "vol_spike": 0.45
+    },
+    {
+      "rank": 2,
+      "ticker": "ACN",
+      "score": 0.3632,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "RSI oversold",
+      "ret_3d": -0.0265,
+      "rsi_5": 22.2,
+      "vol_spike": 0.62
+    },
+    {
+      "rank": 3,
+      "ticker": "MDLZ",
+      "score": 0.3659,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Mixed signals",
+      "ret_3d": -0.0147,
+      "rsi_5": 36.0,
+      "vol_spike": 0.43
+    },
+    {
+      "rank": 4,
+      "ticker": "XOM",
+      "score": 0.3827,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Mixed signals",
+      "ret_3d": 0.007,
+      "rsi_5": 44.7,
+      "vol_spike": 0.65
+    },
+    {
+      "rank": 5,
+      "ticker": "LOW",
+      "score": 0.383,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Mixed signals",
+      "ret_3d": -0.0027,
+      "rsi_5": 48.5,
+      "vol_spike": 0.51
+    }
+  ]
+}
