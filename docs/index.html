@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fast Swing Stock Predictor</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0d1117;
+      --surface:    #161b22;
+      --border:     #30363d;
+      --text:       #e6edf3;
+      --muted:      #8b949e;
+      --green:      #3fb950;
+      --green-dim:  #1a3a1f;
+      --red:        #f85149;
+      --red-dim:    #3a1a1a;
+      --yellow:     #d29922;
+      --blue:       #58a6ff;
+      --radius:     8px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      min-height: 100vh;
+      padding: 0 16px 48px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 0 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 16px;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    header h1 span { color: var(--green); }
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.7;
+    }
+    .meta strong { color: var(--text); }
+
+    /* ── BADGES ── */
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .badge-high-buy  { background: var(--green-dim); color: var(--green); border: 1px solid var(--green); }
+    .badge-med-buy   { background: #1a2a1a; color: #7ee787; border: 1px solid #3a5a3a; }
+    .badge-low-buy   { background: #1e2020; color: var(--muted); border: 1px solid var(--border); }
+    .badge-high-sell { background: var(--red-dim); color: var(--red); border: 1px solid var(--red); }
+    .badge-med-sell  { background: #2a1a1a; color: #ff7b72; border: 1px solid #5a3a3a; }
+    .badge-low-sell  { background: #1e2020; color: var(--muted); border: 1px solid var(--border); }
+
+    /* ── SECTIONS ── */
+    .section {
+      max-width: 1100px;
+      margin: 32px auto 0;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .section-title h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .dot-red   { background: var(--red);   box-shadow: 0 0 6px var(--red); }
+    .subtitle  { font-size: 0.78rem; color: var(--muted); margin-left: auto; }
+
+    /* ── TABLE ── */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    thead th {
+      background: var(--surface);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+    }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(255,255,255,0.03); }
+    td {
+      padding: 11px 14px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .rank { color: var(--muted); font-size: 0.8rem; }
+    .ticker {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      font-family: monospace;
+    }
+    .ticker-buy  { color: var(--green); }
+    .ticker-sell { color: var(--red); }
+
+    /* Score bar */
+    .score-wrap { display: flex; align-items: center; gap: 8px; }
+    .score-bar-bg {
+      width: 56px; height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .score-bar-fill { height: 100%; border-radius: 3px; }
+    .score-val { font-size: 0.8rem; color: var(--muted); min-width: 36px; }
+
+    .sector  { color: var(--muted); font-size: 0.8rem; max-width: 160px; white-space: normal; line-height: 1.3; }
+    .signal  { color: var(--muted); font-size: 0.78rem; max-width: 200px; white-space: normal; line-height: 1.4; }
+    .num     { font-variant-numeric: tabular-nums; font-size: 0.82rem; }
+    .pos     { color: var(--green); }
+    .neg     { color: var(--red); }
+
+    /* ── EMPTY STATE ── */
+    .empty {
+      text-align: center;
+      padding: 56px 16px;
+      color: var(--muted);
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .empty h3 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
+    .empty p  { font-size: 0.85rem; line-height: 1.6; }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      flex: 1;
+      min-width: 160px;
+    }
+    .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .stat-value { font-size: 1.3rem; font-weight: 700; }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .meta  { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Fast <span>Swing</span> Predictor</h1>
+    <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">
+      S&amp;P 500 &middot; LightGBM + Momentum Ensemble &middot; 3-5 Day Hold
+    </div>
+  </div>
+  <div class="meta" id="header-meta">
+    <strong>Loading&hellip;</strong>
+  </div>
+</header>
+
+<div class="stats-row" id="stats-row" style="display:none">
+  <div class="stat-card">
+    <div class="stat-label">Stocks Analyzed</div>
+    <div class="stat-value" id="stat-analyzed">—</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Prediction Date</div>
+    <div class="stat-value" id="stat-date" style="font-size:1rem">—</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Model</div>
+    <div class="stat-value" style="font-size:0.85rem;line-height:1.4">LightGBM<br><span style="color:var(--muted);font-size:0.75rem">60% ML + 40% Momentum</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Hold Period</div>
+    <div class="stat-value" style="font-size:1rem">3–5 Days</div>
+  </div>
+</div>
+
+<!-- BUY SECTION -->
+<div class="section" id="buy-section"></div>
+
+<!-- SHORT SECTION -->
+<div class="section" id="short-section"></div>
+
+<footer>
+  <strong>Disclaimer:</strong> This tool is for <strong>educational and informational purposes only</strong>.
+  It is not financial advice. Past model performance does not guarantee future results.
+  All investing involves risk. Always do your own research before making any investment decisions.
+  &nbsp;&middot;&nbsp;
+  <a href="https://github.com/p1k4c6u/borsiforell" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+  function fmtScore(score) {
+    return score.toFixed(3);
+  }
+
+  function fmtRet(val) {
+    const pct = (val * 100).toFixed(1);
+    return pct >= 0 ? `+${pct}%` : `${pct}%`;
+  }
+
+  function retClass(val) {
+    return val >= 0 ? 'pos' : 'neg';
+  }
+
+  function scoreFill(score, isBuy) {
+    const color = isBuy ? '#3fb950' : '#f85149';
+    const pct = Math.round(score * 100);
+    return `<div class="score-wrap">
+      <div class="score-bar-bg">
+        <div class="score-bar-fill" style="width:${pct}%;background:${color}"></div>
+      </div>
+      <span class="score-val">${fmtScore(score)}</span>
+    </div>`;
+  }
+
+  function confidenceBadge(conf, isBuy) {
+    const type = isBuy ? 'buy' : 'sell';
+    const cls = `badge badge-${conf.toLowerCase()}-${type}`;
+    return `<span class="${cls}">${conf}</span>`;
+  }
+
+  function buildTable(picks, isBuy) {
+    const rows = picks.map((p, idx) => `
+      <tr>
+        <td class="rank">#${p.rank}</td>
+        <td><span class="ticker ${isBuy ? 'ticker-buy' : 'ticker-sell'}">${p.ticker}</span></td>
+        <td>${scoreFill(p.score, isBuy)}</td>
+        <td>${confidenceBadge(p.confidence, isBuy)}</td>
+        <td class="sector">${p.sector || '—'}</td>
+        <td class="signal">${p.signal || '—'}</td>
+        <td class="num ${retClass(p.ret_3d)}">${fmtRet(p.ret_3d)}</td>
+        <td class="num">${p.rsi_5.toFixed(0)}</td>
+        <td class="num">${p.vol_spike.toFixed(2)}x</td>
+      </tr>`).join('');
+
+    return `
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Ticker</th>
+              <th>Score</th>
+              <th>Confidence</th>
+              <th>Sector</th>
+              <th>Signal</th>
+              <th>3d Ret</th>
+              <th>RSI(5)</th>
+              <th>Vol Spike</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  function buildEmpty(msg) {
+    return `<div class="empty">
+      <h3>No data yet</h3>
+      <p>${msg}</p>
+    </div>`;
+  }
+
+  function render(data) {
+    // Header meta
+    const metaEl = document.getElementById('header-meta');
+    if (data.generated_at) {
+      const dt = new Date(data.generated_at);
+      const opts = { year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', timeZoneName:'short' };
+      metaEl.innerHTML = `Last updated<br><strong>${dt.toLocaleString(undefined, opts)}</strong>`;
+    } else {
+      metaEl.innerHTML = '<strong>Awaiting first run</strong><br><span>Check back after market close</span>';
+    }
+
+    // Stats
+    if (data.stocks_analyzed > 0) {
+      document.getElementById('stats-row').style.display = 'flex';
+      document.getElementById('stat-analyzed').textContent = data.stocks_analyzed.toLocaleString();
+      document.getElementById('stat-date').textContent = data.date || '—';
+    }
+
+    // BUY section
+    const buyEl = document.getElementById('buy-section');
+    const buyCount = (data.buys || []).length;
+    buyEl.innerHTML = `
+      <div class="section-title">
+        <div class="dot dot-green"></div>
+        <h2>Top ${buyCount} Buys &mdash; Long 3-5 Days</h2>
+        <span class="subtitle">Score &gt; 0.65 = HIGH confidence</span>
+      </div>
+      ${buyCount > 0 ? buildTable(data.buys, true) : buildEmpty('The GitHub Actions workflow hasn\'t run yet, or the market was closed. Try again after the next market close.')}`;
+
+    // SHORT section
+    const shortEl = document.getElementById('short-section');
+    const shortCount = (data.shorts || []).length;
+    shortEl.innerHTML = `
+      <div class="section-title">
+        <div class="dot dot-red"></div>
+        <h2>Top ${shortCount} Shorts &mdash; Avoid / Short 3-5 Days</h2>
+        <span class="subtitle">Score &lt; 0.35 = HIGH confidence</span>
+      </div>
+      ${shortCount > 0 ? buildTable(data.shorts, false) : buildEmpty('No short picks available yet.')}`;
+  }
+
+  // Fetch predictions.json relative to this page
+  fetch('./predictions.json')
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(render)
+    .catch(err => {
+      document.getElementById('header-meta').innerHTML =
+        `<strong style="color:var(--red)">Failed to load predictions</strong><br><span>${err.message}</span>`;
+      document.getElementById('buy-section').innerHTML =
+        buildEmpty('Could not load predictions.json. Make sure the GitHub Actions workflow has run at least once.');
+    });
+</script>
+</body>
+</html>

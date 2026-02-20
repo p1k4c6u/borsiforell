@@ -1,0 +1,43 @@
+name: Daily Stock Predictions
+
+on:
+  schedule:
+    # 9:30 PM UTC Mon–Fri = ~5:30 PM ET, after US market close
+    - cron: '30 21 * * 1-5'
+  workflow_dispatch:  # allow manual trigger for testing
+
+permissions:
+  contents: write
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: files/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r files/requirements.txt
+
+      - name: Run predictor and generate JSON
+        run: python files/stock_predictor.py --json
+        # Writes docs/predictions.json with today's BUY + SHORT picks
+
+      - name: Commit and push updated predictions
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/predictions.json
+          # Only commit if the file actually changed
+          git diff --staged --quiet || \
+            git commit -m "chore: update daily predictions $(date -u '+%Y-%m-%d') [skip ci]"
+          git push
