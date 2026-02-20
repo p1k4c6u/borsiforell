@@ -1,119 +1,119 @@
 {
-  "generated_at": "2026-02-20T20:11:42Z",
+  "generated_at": "2026-02-20T20:51:41Z",
   "date": "2026-02-20",
   "stocks_analyzed": 49,
   "buys": [
     {
       "rank": 1,
       "ticker": "AMZN",
-      "score": 0.637,
+      "score": 0.6281,
       "confidence": "MED",
       "sector": "?",
       "signal": "Strong momentum",
-      "ret_3d": 0.0433,
-      "rsi_5": 56.3,
-      "vol_spike": 0.83
+      "ret_3d": 0.0441,
+      "rsi_5": 56.7,
+      "vol_spike": 0.88
     },
     {
       "rank": 2,
       "ticker": "IBM",
-      "score": 0.5594,
+      "score": 0.5634,
       "confidence": "MED",
       "sector": "?",
       "signal": "RSI oversold",
-      "ret_3d": -0.0026,
-      "rsi_5": 26.5,
-      "vol_spike": 0.42
+      "ret_3d": -0.0013,
+      "rsi_5": 27.5,
+      "vol_spike": 0.49
     },
     {
       "rank": 3,
       "ticker": "UNH",
-      "score": 0.5294,
+      "score": 0.5279,
       "confidence": "LOW",
       "sector": "?",
       "signal": "Mixed signals",
-      "ret_3d": 0.0027,
-      "rsi_5": 58.4,
-      "vol_spike": 0.38
+      "ret_3d": 0.0022,
+      "rsi_5": 58.0,
+      "vol_spike": 0.43
     },
     {
       "rank": 4,
       "ticker": "GOOGL",
-      "score": 0.5251,
+      "score": 0.5244,
       "confidence": "LOW",
       "sector": "?",
       "signal": "Strong momentum",
-      "ret_3d": 0.0471,
-      "rsi_5": 60.8,
-      "vol_spike": 0.91
+      "ret_3d": 0.0441,
+      "rsi_5": 59.3,
+      "vol_spike": 1.01
     },
     {
       "rank": 5,
-      "ticker": "META",
-      "score": 0.5152,
+      "ticker": "CSCO",
+      "score": 0.505,
       "confidence": "LOW",
       "sector": "?",
       "signal": "Mixed signals",
-      "ret_3d": 0.027,
-      "rsi_5": 54.0,
-      "vol_spike": 0.64
+      "ret_3d": 0.0277,
+      "rsi_5": 47.1,
+      "vol_spike": 0.72
     }
   ],
   "shorts": [
     {
       "rank": 1,
-      "ticker": "ABBV",
-      "score": 0.3606,
+      "ticker": "XOM",
+      "score": 0.3818,
       "confidence": "MED",
       "sector": "?",
       "signal": "Mixed signals",
-      "ret_3d": -0.0288,
-      "rsi_5": 49.7,
-      "vol_spike": 0.45
+      "ret_3d": 0.0055,
+      "rsi_5": 44.0,
+      "vol_spike": 0.73
     },
     {
       "rank": 2,
-      "ticker": "ACN",
-      "score": 0.3632,
+      "ticker": "NVDA",
+      "score": 0.3866,
       "confidence": "MED",
       "sector": "?",
-      "signal": "RSI oversold",
-      "ret_3d": -0.0265,
-      "rsi_5": 22.2,
-      "vol_spike": 0.62
+      "signal": "Mixed signals",
+      "ret_3d": 0.0254,
+      "rsi_5": 63.3,
+      "vol_spike": 0.92
     },
     {
       "rank": 3,
-      "ticker": "MDLZ",
-      "score": 0.3659,
+      "ticker": "HD",
+      "score": 0.3926,
       "confidence": "MED",
       "sector": "?",
       "signal": "Mixed signals",
-      "ret_3d": -0.0147,
-      "rsi_5": 36.0,
-      "vol_spike": 0.43
+      "ret_3d": -0.0033,
+      "rsi_5": 43.4,
+      "vol_spike": 0.69
     },
     {
       "rank": 4,
-      "ticker": "XOM",
-      "score": 0.3827,
+      "ticker": "ACN",
+      "score": 0.3926,
       "confidence": "MED",
       "sector": "?",
-      "signal": "Mixed signals",
-      "ret_3d": 0.007,
-      "rsi_5": 44.7,
-      "vol_spike": 0.65
+      "signal": "RSI oversold",
+      "ret_3d": -0.0222,
+      "rsi_5": 23.2,
+      "vol_spike": 0.7
     },
     {
       "rank": 5,
-      "ticker": "LOW",
-      "score": 0.383,
+      "ticker": "BRK-B",
+      "score": 0.3958,
       "confidence": "MED",
       "sector": "?",
       "signal": "Mixed signals",
-      "ret_3d": -0.0027,
-      "rsi_5": 48.5,
-      "vol_spike": 0.51
+      "ret_3d": -0.0124,
+      "rsi_5": 45.3,
+      "vol_spike": 0.7
     }
   ]
 }
