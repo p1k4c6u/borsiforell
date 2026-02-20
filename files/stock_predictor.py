@@ -14,17 +14,21 @@ import warnings
 warnings.filterwarnings('ignore')
 
 import argparse
+import json
+import logging
 import os
 import pickle
 import numpy as np
 import pandas as pd
 import yfinance as yf
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from ta.momentum import RSIIndicator
 from ta.volatility import BollingerBands, AverageTrueRange
 from ta.volume import OnBalanceVolumeIndicator
 from lightgbm import LGBMClassifier
 from sklearn.preprocessing import LabelEncoder
+
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
 # ─────────────────────────────────────────────
 # CONFIG
@@ -48,7 +52,8 @@ def get_sp500_tickers():
             table["GICS Sector"]
         ))
         return tickers, sectors
-    except Exception:
+    except Exception as e:
+        logging.warning(f"Could not fetch S&P 500 from Wikipedia: {e}. Using fallback list.")
         # Fallback: top 50 liquid stocks
         fallback = [
             "AAPL","MSFT","AMZN","NVDA","GOOGL","META","TSLA","BRK-B","UNH","JNJ",
@@ -99,15 +104,16 @@ def compute_features(df):
     f['dist_20d_high'] = c / c.rolling(20).max() - 1
 
     # --- C: Volume (5) ---
-    vol_20 = v.rolling(20).mean()
-    f['vol_ratio_5_20'] = v.rolling(5).mean() / (vol_20 + 1)
-    f['vol_spike'] = v / (vol_20 + 1)
+    vol_20 = v.rolling(20).mean().replace(0, np.nan)
+    f['vol_ratio_5_20'] = v.rolling(5).mean() / vol_20
+    f['vol_spike'] = v / vol_20
     f['obv_slope'] = OnBalanceVolumeIndicator(c, v).on_balance_volume().diff(5)
     # Volume-price divergence: price up but volume down = bearish divergence
     f['vol_price_div'] = f['ret_5d'] * np.log1p(f['vol_ratio_5_20'])
     # VWAP distance (approx using typical price * volume)
     typical_price = (h + l + c) / 3
-    vwap = (typical_price * v).rolling(20).sum() / (v.rolling(20).sum() + 1)
+    vol_20_sum = v.rolling(20).sum().replace(0, np.nan)
+    vwap = (typical_price * v).rolling(20).sum() / vol_20_sum
     f['vwap_dist'] = c / vwap - 1
 
     # --- D: Volatility (4) ---
@@ -122,40 +128,6 @@ def compute_features(df):
     # --- E: Sector features are added later (cross-sectional) ---
 
     return f
-
-def add_sector_features(all_features, sectors):
-    """Add cross-sectional sector features across all stocks."""
-    combined = []
-
-    for date in all_features[list(all_features.keys())[0]].index:
-        row_data = {}
-        for ticker, feat_df in all_features.items():
-            if date in feat_df.index:
-                row_data[ticker] = feat_df.loc[date]
-
-        if len(row_data) < 20:
-            continue
-
-        cross = pd.DataFrame(row_data).T
-        cross['sector'] = cross.index.map(lambda t: sectors.get(t, 'Unknown'))
-
-        # SPY/market return (average of all stocks as proxy)
-        spy_ret_3d = cross['ret_3d'].mean()
-
-        for ticker in cross.index:
-            sector = cross.loc[ticker, 'sector']
-            sector_mask = cross['sector'] == sector
-            sector_stocks = cross[sector_mask]
-
-            feat = all_features[ticker]
-            if date in feat.index:
-                feat.loc[date, 'sector_ret_3d'] = sector_stocks['ret_3d'].mean()
-                feat.loc[date, 'sector_breadth'] = (sector_stocks['ret_3d'] > 0).mean()
-                feat.loc[date, 'rank_in_sector'] = sector_stocks['ret_5d'].rank(pct=True).get(ticker, 0.5)
-                feat.loc[date, 'spy_ret_3d'] = spy_ret_3d
-                feat.loc[date, 'sector_vs_market'] = sector_stocks['ret_3d'].mean() - spy_ret_3d
-
-    return all_features
 
 def add_sector_features_fast(all_features, sectors):
     """Vectorized sector feature computation — much faster than row-by-row."""
@@ -246,7 +218,8 @@ def build_dataset(data, tickers, sectors):
             all_features[ticker] = feat
             close_dict[ticker] = df['Close']
             processed += 1
-        except Exception:
+        except Exception as e:
+            logging.warning(f"Skipped {ticker}: {e}")
             continue
 
     print(f"Computed features for {processed} stocks")
@@ -272,6 +245,9 @@ def build_dataset(data, tickers, sectors):
 
     combined = pd.concat(rows, ignore_index=True)
 
+    # Sort by date before splitting — critical to prevent temporal leakage
+    combined = combined.sort_values('date').reset_index(drop=True)
+
     # Compute quintiles per date (cross-sectional)
     combined['quintile'] = combined.groupby('date')['forward_return'].transform(
         lambda x: pd.qcut(x, NUM_QUINTILES, labels=False, duplicates='drop')
@@ -290,7 +266,7 @@ def train_model(combined):
     X = combined[FEATURE_COLS].values
     y = combined['quintile'].astype(int).values
 
-    # Use last 20% as validation
+    # Use last 20% (chronologically) as validation — data is sorted by date
     split = int(len(combined) * 0.8)
     X_train, X_val = X[:split], X[split:]
     y_train, y_val = y[:split], y[split:]
@@ -375,7 +351,8 @@ def predict_today(model, all_features, sectors):
 
         # LightGBM prediction (probabilities)
         proba = model.predict_proba(X)[0]
-        lgbm_score = sum(proba[i] * i for i in range(len(proba))) / (NUM_QUINTILES - 1)
+        n_classes = len(proba)
+        lgbm_score = sum(proba[i] * i for i in range(n_classes)) / max(n_classes - 1, 1)
 
         # Momentum baseline
         mom_score = momentum_score(latest)
@@ -461,6 +438,41 @@ def print_picks(results_df, top_n=5):
 
     return buys, shorts
 
+
+def save_json(buys, shorts, n_analyzed, output_path="docs/predictions.json"):
+    """Save today's picks as JSON for the GitHub Pages dashboard."""
+    def row_to_dict(rank, row, is_buy):
+        score = float(row['score'])
+        if is_buy:
+            conf = "HIGH" if score > 0.65 else ("MED" if score > 0.55 else "LOW")
+        else:
+            conf = "HIGH" if score < 0.35 else ("MED" if score < 0.45 else "LOW")
+        return {
+            "rank": rank,
+            "ticker": str(row['ticker']),
+            "score": round(score, 4),
+            "confidence": conf,
+            "sector": str(row['sector']),
+            "signal": str(row['signal']),
+            "ret_3d": round(float(row['ret_3d']), 4),
+            "rsi_5": round(float(row['rsi_5']), 1),
+            "vol_spike": round(float(row['vol_spike']), 2),
+        }
+
+    payload = {
+        "generated_at": datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "date": datetime.today().strftime('%Y-%m-%d'),
+        "stocks_analyzed": int(n_analyzed),
+        "buys": [row_to_dict(i, row, True) for i, (_, row) in enumerate(buys.iterrows(), 1)],
+        "shorts": [row_to_dict(i, row, False) for i, (_, row) in enumerate(shorts.iterrows(), 1)],
+    }
+
+    os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
+    with open(output_path, 'w') as f:
+        json.dump(payload, f, indent=2)
+    print(f"Predictions JSON saved to {output_path}")
+
+
 # ─────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────
@@ -469,6 +481,7 @@ def main():
     parser.add_argument('--train', action='store_true', help='Force retrain model')
     parser.add_argument('--top', type=int, default=5, help='Number of top picks (default 5)')
     parser.add_argument('--years', type=int, default=TRAIN_YEARS, help='Years of training data')
+    parser.add_argument('--json', action='store_true', help='Also save picks to docs/predictions.json')
     args = parser.parse_args()
 
     # 1. Get tickers
@@ -504,6 +517,10 @@ def main():
     # 7. Save to CSV
     results.to_csv("predictions.csv", index=False)
     print("Full rankings saved to predictions.csv")
+
+    # 8. Save JSON for GitHub Pages dashboard
+    if args.json:
+        save_json(buys, shorts, n_analyzed=len(results))
 
 if __name__ == "__main__":
     main()
