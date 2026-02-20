@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-02-20T21:47:53Z",
+  "generated_at": "2026-02-20T21:50:36Z",
   "date": "2026-02-20",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "ACN",
-      "score": 0.5118,
-      "bounce_score": 0.85,
-      "sentiment_score": 0.4722,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.0206,
-      "ret_20d": -0.2446,
-      "rsi_5": 24.3,
-      "vol_spike": 0.79
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": [
     {
