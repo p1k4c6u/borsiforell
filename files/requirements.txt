@@ -6,3 +6,5 @@ scikit-learn>=1.3
 ta>=0.11
 lxml
 html5lib
+beautifulsoup4>=4.12.0
+requests>=2.31.0
