@@ -1,14 +1,9 @@
 {
-  "generated_at": "2026-02-25T21:58:10Z",
-  "date": "2026-02-25",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-02-26T21:55:29Z",
+  "date": "2026-02-26",
+  "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
-  "blocked": [
-    {
-      "ticker": "DE",
-      "reason": "11.6% on 3.5x volume"
-    }
-  ]
+  "blocked": []
 }
