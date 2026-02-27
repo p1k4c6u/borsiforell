@@ -1,9 +1,38 @@
 {
-  "generated_at": "2026-02-26T21:55:29Z",
-  "date": "2026-02-26",
+  "generated_at": "2026-02-27T21:52:44Z",
+  "date": "2026-02-27",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "IBM",
+      "score": 0.6048,
+      "bounce_score": 0.55,
+      "sentiment_score": 0.1471,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Strong momentum",
+      "ret_3d": 0.0475,
+      "ret_20d": -0.2188,
+      "rsi_5": 39.1,
+      "vol_spike": 0.57
+    },
+    {
+      "rank": 2,
+      "ticker": "BA",
+      "score": 0.528,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.5143,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Near BB low + Oversold bounce",
+      "ret_3d": -0.0251,
+      "ret_20d": -0.0278,
+      "rsi_5": 25.0,
+      "vol_spike": 1.05
+    }
+  ],
   "shorts": [],
   "blocked": []
 }
