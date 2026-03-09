@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-03-06T21:53:01Z",
-  "date": "2026-03-06",
+  "generated_at": "2026-03-09T21:55:17Z",
+  "date": "2026-03-09",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "AXP",
-      "score": 0.551,
-      "bounce_score": 0.7,
-      "sentiment_score": 0.0,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "RSI oversold + Sector weak + Oversold bounce",
-      "ret_3d": -0.0222,
-      "ret_20d": -0.1512,
-      "rsi_5": 23.1,
-      "vol_spike": 1.02
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
