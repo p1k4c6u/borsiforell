@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-03-11T21:56:09Z",
-  "date": "2026-03-11",
+  "generated_at": "2026-03-12T21:56:02Z",
+  "date": "2026-03-12",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "ADI",
-      "score": 0.4823,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.5333,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": 0.0108,
-      "ret_20d": -0.0152,
-      "rsi_5": 24.9,
-      "vol_spike": 0.56
-    },
-    {
-      "rank": 2,
-      "ticker": "UNP",
-      "score": 0.4694,
-      "bounce_score": 0.65,
-      "sentiment_score": -0.0455,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0118,
-      "ret_20d": -0.034,
-      "rsi_5": 21.8,
-      "vol_spike": 0.66
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
