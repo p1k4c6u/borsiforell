@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-03-16T22:02:39Z",
-  "date": "2026-03-16",
+  "generated_at": "2026-03-17T22:02:49Z",
+  "date": "2026-03-17",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "DE",
+      "score": 0.4765,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.4516,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Oversold bounce",
+      "ret_3d": -0.0197,
+      "ret_20d": -0.0442,
+      "rsi_5": 23.4,
+      "vol_spike": 0.63
+    }
+  ],
   "shorts": [],
   "blocked": []
 }
