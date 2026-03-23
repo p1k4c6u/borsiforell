@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-03-20T21:53:52Z",
-  "date": "2026-03-20",
+  "generated_at": "2026-03-23T21:57:20Z",
+  "date": "2026-03-23",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "HD",
-      "score": 0.5174,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.2059,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "Vol spike + RSI oversold + Sector weak",
-      "ret_3d": -0.0606,
-      "ret_20d": -0.1553,
-      "rsi_5": 10.2,
-      "vol_spike": 2.22
-    },
-    {
-      "rank": 2,
-      "ticker": "AAPL",
-      "score": 0.4938,
-      "bounce_score": 0.65,
-      "sentiment_score": -0.2273,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "Vol spike + RSI oversold + Sector weak",
-      "ret_3d": -0.0245,
-      "ret_20d": -0.0627,
-      "rsi_5": 23.1,
-      "vol_spike": 2.12
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
