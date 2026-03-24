@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-03-23T21:57:20Z",
-  "date": "2026-03-23",
+  "generated_at": "2026-03-24T22:01:16Z",
+  "date": "2026-03-24",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [],
-  "shorts": [],
+  "shorts": [
+    {
+      "rank": 1,
+      "ticker": "SBUX",
+      "score": 0.2293,
+      "bounce_score": 0.0,
+      "sentiment_score": -0.1562,
+      "confidence": "HIGH",
+      "sector": "?",
+      "signal": "Sharp pullback + Near BB low",
+      "ret_3d": -0.0402,
+      "ret_20d": -0.0469,
+      "rsi_5": 31.1,
+      "vol_spike": 0.75
+    }
+  ],
   "blocked": []
 }
