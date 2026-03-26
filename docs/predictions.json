@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-03-25T22:02:44Z",
-  "date": "2026-03-25",
+  "generated_at": "2026-03-26T21:53:30Z",
+  "date": "2026-03-26",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
-      "ticker": "PG",
-      "score": 0.5734,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.4091,
+      "ticker": "META",
+      "score": 0.5504,
+      "bounce_score": 0.8,
+      "sentiment_score": -0.5455,
       "confidence": "MED",
       "sector": "?",
-      "signal": "RSI oversold + Sector strong + Oversold bounce",
-      "ret_3d": -0.0025,
-      "ret_20d": -0.1192,
-      "rsi_5": 22.7,
-      "vol_spike": 0.71
+      "signal": "Vol spike + RSI oversold + Sharp pullback",
+      "ret_3d": -0.0936,
+      "ret_20d": -0.1659,
+      "rsi_5": 13.0,
+      "vol_spike": 2.45
     }
   ],
   "shorts": [],
