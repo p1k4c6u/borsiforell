@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-03-31T22:03:27Z",
-  "date": "2026-03-31",
+  "generated_at": "2026-04-01T22:03:51Z",
+  "date": "2026-04-01",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "PM",
+      "score": 0.6054,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.7188,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Vol spike + RSI oversold + Sector strong",
+      "ret_3d": -0.038,
+      "ret_20d": -0.1134,
+      "rsi_5": 21.7,
+      "vol_spike": 1.88
+    }
+  ],
   "shorts": [],
   "blocked": []
 }
