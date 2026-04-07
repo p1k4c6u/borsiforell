@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-04-06T22:00:07Z",
-  "date": "2026-04-06",
+  "generated_at": "2026-04-07T22:04:52Z",
+  "date": "2026-04-07",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "AMGN",
+      "score": 0.5263,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.2895,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Sharp pullback + Oversold bounce",
+      "ret_3d": -0.0376,
+      "ret_20d": -0.0981,
+      "rsi_5": 20.0,
+      "vol_spike": 1.18
+    }
+  ],
   "shorts": [],
   "blocked": []
 }
