@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-04-09T22:05:38Z",
-  "date": "2026-04-09",
+  "generated_at": "2026-04-10T22:03:35Z",
+  "date": "2026-04-10",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "TSLA",
-      "score": 0.6193,
-      "bounce_score": 0.55,
-      "sentiment_score": -0.05,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "Sector strong",
-      "ret_3d": -0.0204,
-      "ret_20d": -0.1525,
-      "rsi_5": 30.9,
-      "vol_spike": 0.94
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
