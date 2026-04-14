@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-04-13T22:09:47Z",
-  "date": "2026-04-13",
+  "generated_at": "2026-04-14T22:11:21Z",
+  "date": "2026-04-14",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [],
-  "shorts": [],
+  "shorts": [
+    {
+      "rank": 1,
+      "ticker": "CAT",
+      "score": 0.2444,
+      "bounce_score": 0.2,
+      "sentiment_score": 0.24,
+      "confidence": "HIGH",
+      "sector": "?",
+      "signal": "RSI overbought",
+      "ret_3d": 0.0091,
+      "ret_20d": 0.135,
+      "rsi_5": 84.6,
+      "vol_spike": 0.79
+    }
+  ],
   "blocked": []
 }
