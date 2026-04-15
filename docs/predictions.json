@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-04-14T22:11:21Z",
-  "date": "2026-04-14",
+  "generated_at": "2026-04-15T22:10:36Z",
+  "date": "2026-04-15",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
-  "shorts": [
+  "buys": [
     {
       "rank": 1,
-      "ticker": "CAT",
-      "score": 0.2444,
-      "bounce_score": 0.2,
-      "sentiment_score": 0.24,
-      "confidence": "HIGH",
+      "ticker": "XOM",
+      "score": 0.5032,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.0833,
+      "confidence": "LOW",
       "sector": "?",
-      "signal": "RSI overbought",
-      "ret_3d": 0.0091,
-      "ret_20d": 0.135,
-      "rsi_5": 84.6,
-      "vol_spike": 0.79
+      "signal": "RSI oversold + Near BB low + Oversold bounce",
+      "ret_3d": -0.0229,
+      "ret_20d": -0.0617,
+      "rsi_5": 15.8,
+      "vol_spike": 0.49
     }
   ],
+  "shorts": [],
   "blocked": []
 }
