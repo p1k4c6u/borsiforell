@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-04-17T22:06:32Z",
-  "date": "2026-04-17",
+  "generated_at": "2026-04-20T22:09:14Z",
+  "date": "2026-04-20",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "XOM",
-      "score": 0.5913,
-      "bounce_score": 0.65,
-      "sentiment_score": -0.0714,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0188,
-      "ret_20d": -0.0741,
-      "rsi_5": 23.5,
-      "vol_spike": 1.11
-    },
-    {
-      "rank": 2,
-      "ticker": "JNJ",
-      "score": 0.4859,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.5806,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0247,
-      "ret_20d": -0.0144,
-      "rsi_5": 24.4,
-      "vol_spike": 1.13
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
