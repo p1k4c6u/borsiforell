@@ -1,9 +1,33 @@
 {
-  "generated_at": "2026-04-22T22:11:20Z",
-  "date": "2026-04-22",
-  "stocks_analyzed": 49,
+  "generated_at": "2026-04-23T22:08:48Z",
+  "date": "2026-04-23",
+  "stocks_analyzed": 47,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "TMO",
+      "score": 0.4547,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.5161,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "Vol spike + RSI oversold + Sharp pullback",
+      "ret_3d": -0.1128,
+      "ret_20d": -0.049,
+      "rsi_5": 17.3,
+      "vol_spike": 2.83
+    }
+  ],
   "shorts": [],
-  "blocked": []
+  "blocked": [
+    {
+      "ticker": "TXN",
+      "reason": "19.4% on 3.7x volume"
+    },
+    {
+      "ticker": "IBM",
+      "reason": "-8.3% on 3.7x volume"
+    }
+  ]
 }
