@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-04-23T22:08:48Z",
-  "date": "2026-04-23",
+  "generated_at": "2026-04-24T22:09:44Z",
+  "date": "2026-04-24",
   "stocks_analyzed": 47,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
-      "ticker": "TMO",
-      "score": 0.4547,
+      "ticker": "ABBV",
+      "score": 0.4936,
       "bounce_score": 0.65,
-      "sentiment_score": 0.5161,
+      "sentiment_score": 0.3226,
       "confidence": "LOW",
       "sector": "?",
-      "signal": "Vol spike + RSI oversold + Sharp pullback",
-      "ret_3d": -0.1128,
-      "ret_20d": -0.049,
-      "rsi_5": 17.3,
-      "vol_spike": 2.83
+      "signal": "RSI oversold + Sharp pullback + Near BB low",
+      "ret_3d": -0.0312,
+      "ret_20d": -0.051,
+      "rsi_5": 22.9,
+      "vol_spike": 1.16
     }
   ],
   "shorts": [],
@@ -27,7 +27,7 @@
     },
     {
       "ticker": "IBM",
-      "reason": "-8.3% on 3.7x volume"
+      "reason": "-8.3% on 3.9x volume"
     }
   ]
 }
