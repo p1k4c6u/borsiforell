@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-28T22:31:55Z",
-  "date": "2026-04-28",
-  "stocks_analyzed": 47,
+  "generated_at": "2026-04-29T22:31:23Z",
+  "date": "2026-04-29",
+  "stocks_analyzed": 46,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
@@ -13,6 +13,10 @@
     {
       "ticker": "IBM",
       "reason": "-8.3% on 3.9x volume"
+    },
+    {
+      "ticker": "SBUX",
+      "reason": "8.4% on 3.5x volume"
     }
   ]
 }
