@@ -1,18 +1,14 @@
 {
-  "generated_at": "2026-04-29T22:31:23Z",
-  "date": "2026-04-29",
-  "stocks_analyzed": 46,
+  "generated_at": "2026-04-30T22:28:35Z",
+  "date": "2026-04-30",
+  "stocks_analyzed": 47,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
   "blocked": [
     {
-      "ticker": "TXN",
-      "reason": "19.4% on 3.7x volume"
-    },
-    {
-      "ticker": "IBM",
-      "reason": "-8.3% on 3.9x volume"
+      "ticker": "META",
+      "reason": "-8.6% on 3.3x volume"
     },
     {
       "ticker": "SBUX",
