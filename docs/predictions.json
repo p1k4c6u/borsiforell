@@ -1,18 +1,29 @@
 {
-  "generated_at": "2026-05-05T22:31:10Z",
-  "date": "2026-05-05",
-  "stocks_analyzed": 47,
+  "generated_at": "2026-05-06T22:25:18Z",
+  "date": "2026-05-06",
+  "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "ABT",
+      "score": 0.5107,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.3182,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Sharp pullback + Near BB low",
+      "ret_3d": -0.0353,
+      "ret_20d": -0.1614,
+      "rsi_5": 14.8,
+      "vol_spike": 0.9
+    }
+  ],
   "shorts": [],
   "blocked": [
     {
       "ticker": "META",
       "reason": "-8.6% on 3.3x volume"
-    },
-    {
-      "ticker": "SBUX",
-      "reason": "8.4% on 3.5x volume"
     }
   ]
 }
