@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-05-08T22:30:42Z",
-  "date": "2026-05-08",
+  "generated_at": "2026-05-11T22:33:13Z",
+  "date": "2026-05-11",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "ABT",
-      "score": 0.6075,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.3182,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "RSI oversold + Sharp pullback + Near BB low",
-      "ret_3d": -0.0327,
-      "ret_20d": -0.154,
-      "rsi_5": 16.0,
-      "vol_spike": 0.76
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
