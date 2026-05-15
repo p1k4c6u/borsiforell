@@ -1,52 +1,9 @@
 {
-  "generated_at": "2026-05-14T22:37:16Z",
-  "date": "2026-05-14",
+  "generated_at": "2026-05-15T22:30:24Z",
+  "date": "2026-05-15",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "ACN",
-      "score": 0.6021,
-      "bounce_score": 0.55,
-      "sentiment_score": 0.3704,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "Vol spike + RSI oversold + Sharp pullback",
-      "ret_3d": -0.0485,
-      "ret_20d": -0.1547,
-      "rsi_5": 29.9,
-      "vol_spike": 1.51
-    },
-    {
-      "rank": 2,
-      "ticker": "DHR",
-      "score": 0.5313,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.6667,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.0119,
-      "ret_20d": -0.1509,
-      "rsi_5": 9.1,
-      "vol_spike": 0.74
-    },
-    {
-      "rank": 3,
-      "ticker": "HD",
-      "score": 0.5259,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.45,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.0226,
-      "ret_20d": -0.0973,
-      "rsi_5": 24.8,
-      "vol_spike": 0.91
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": [
     {
