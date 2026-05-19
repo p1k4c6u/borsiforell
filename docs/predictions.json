@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-18T22:32:35Z",
-  "date": "2026-05-18",
+  "generated_at": "2026-05-19T22:45:02Z",
+  "date": "2026-05-19",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
@@ -8,44 +8,16 @@
     {
       "rank": 1,
       "ticker": "TSLA",
-      "score": 0.2128,
-      "bounce_score": 0.0,
-      "sentiment_score": 0.1818,
+      "score": 0.2397,
+      "bounce_score": 0.2,
+      "sentiment_score": 0.0714,
       "confidence": "HIGH",
       "sector": "?",
       "signal": "Sharp pullback",
-      "ret_3d": -0.0792,
-      "ret_20d": 0.0446,
-      "rsi_5": 38.0,
-      "vol_spike": 0.87
-    },
-    {
-      "rank": 2,
-      "ticker": "TXN",
-      "score": 0.2298,
-      "bounce_score": 0.0,
-      "sentiment_score": 0.4474,
-      "confidence": "HIGH",
-      "sector": "?",
-      "signal": "Mixed signals",
-      "ret_3d": -0.0187,
-      "ret_20d": 0.2928,
-      "rsi_5": 62.0,
-      "vol_spike": 0.72
-    },
-    {
-      "rank": 3,
-      "ticker": "NVDA",
-      "score": 0.2429,
-      "bounce_score": 0.0,
-      "sentiment_score": 0.25,
-      "confidence": "HIGH",
-      "sector": "?",
-      "signal": "Mixed signals",
-      "ret_3d": -0.0155,
-      "ret_20d": 0.1003,
-      "rsi_5": 54.2,
-      "vol_spike": 0.93
+      "ret_3d": -0.0884,
+      "ret_20d": 0.0458,
+      "rsi_5": 33.8,
+      "vol_spike": 0.76
     }
   ],
   "blocked": [
