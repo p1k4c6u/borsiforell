@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-20T22:53:04Z",
-  "date": "2026-05-20",
+  "generated_at": "2026-05-21T22:49:46Z",
+  "date": "2026-05-21",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
   "blocked": [
     {
-      "ticker": "CSCO",
-      "reason": "13.4% on 3.0x volume"
+      "ticker": "IBM",
+      "reason": "12.4% on 3.6x volume"
     }
   ]
 }
