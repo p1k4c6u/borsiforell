@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-22T22:34:42Z",
-  "date": "2026-05-22",
+  "generated_at": "2026-05-25T22:34:35Z",
+  "date": "2026-05-25",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
       "ticker": "DE",
-      "score": 0.5065,
+      "score": 0.4919,
       "bounce_score": 0.65,
       "sentiment_score": 0.3636,
       "confidence": "LOW",
@@ -16,7 +16,7 @@
       "ret_3d": -0.0518,
       "ret_20d": -0.0595,
       "rsi_5": 14.9,
-      "vol_spike": 1.52
+      "vol_spike": 1.53
     }
   ],
   "shorts": [],
