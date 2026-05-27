@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-05-26T22:49:09Z",
-  "date": "2026-05-26",
+  "generated_at": "2026-05-27T22:56:41Z",
+  "date": "2026-05-27",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "DE",
-      "score": 0.4452,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.3636,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Sharp pullback + Near BB low",
-      "ret_3d": -0.0559,
-      "ret_20d": -0.0679,
-      "rsi_5": 14.8,
-      "vol_spike": 1.21
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": [
     {
