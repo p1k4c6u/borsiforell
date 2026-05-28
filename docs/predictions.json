@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-05-27T22:56:41Z",
-  "date": "2026-05-27",
+  "generated_at": "2026-05-28T22:55:52Z",
+  "date": "2026-05-28",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "WMT",
+      "score": 0.4968,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.129,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Near BB low + Oversold bounce",
+      "ret_3d": -0.0114,
+      "ret_20d": -0.0694,
+      "rsi_5": 18.4,
+      "vol_spike": 1.06
+    }
+  ],
   "shorts": [],
   "blocked": [
     {
