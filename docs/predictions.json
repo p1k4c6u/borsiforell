@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-05-29T22:51:47Z",
-  "date": "2026-05-29",
+  "generated_at": "2026-06-01T23:13:32Z",
+  "date": "2026-06-01",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "PM",
-      "score": 0.5344,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.8485,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.0229,
-      "ret_20d": 0.0746,
-      "rsi_5": 22.2,
-      "vol_spike": 0.57
-    },
-    {
-      "rank": 2,
-      "ticker": "NEE",
-      "score": 0.5204,
-      "bounce_score": 0.8,
-      "sentiment_score": 0.56,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "Vol spike + RSI oversold + Oversold bounce",
-      "ret_3d": -0.0073,
-      "ret_20d": -0.1111,
-      "rsi_5": 23.6,
-      "vol_spike": 2.04
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": [
     {
