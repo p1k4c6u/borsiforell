@@ -1,10 +1,25 @@
 {
-  "generated_at": "2026-06-01T23:13:32Z",
-  "date": "2026-06-01",
+  "generated_at": "2026-06-02T23:15:51Z",
+  "date": "2026-06-02",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
-  "shorts": [],
+  "shorts": [
+    {
+      "rank": 1,
+      "ticker": "CSCO",
+      "score": 0.2492,
+      "bounce_score": 0.2,
+      "sentiment_score": 0.1,
+      "confidence": "HIGH",
+      "sector": "?",
+      "signal": "RSI overbought + Strong momentum",
+      "ret_3d": 0.0789,
+      "ret_20d": 0.3818,
+      "rsi_5": 86.4,
+      "vol_spike": 0.9
+    }
+  ],
   "blocked": [
     {
       "ticker": "IBM",
