@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-05T22:42:36Z",
-  "date": "2026-06-05",
-  "stocks_analyzed": 47,
+  "generated_at": "2026-06-08T22:56:59Z",
+  "date": "2026-06-08",
+  "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
@@ -9,10 +9,6 @@
     {
       "ticker": "AVGO",
       "reason": "-12.6% on 3.1x volume"
-    },
-    {
-      "ticker": "IBM",
-      "reason": "7.6% on 3.1x volume"
     }
   ]
 }
