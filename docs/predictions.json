@@ -1,10 +1,25 @@
 {
-  "generated_at": "2026-06-08T22:56:59Z",
-  "date": "2026-06-08",
+  "generated_at": "2026-06-09T22:58:44Z",
+  "date": "2026-06-09",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
-  "shorts": [],
+  "shorts": [
+    {
+      "rank": 1,
+      "ticker": "CSCO",
+      "score": 0.2123,
+      "bounce_score": 0.15,
+      "sentiment_score": 0.0385,
+      "confidence": "HIGH",
+      "sector": "?",
+      "signal": "Sharp pullback",
+      "ret_3d": -0.0742,
+      "ret_20d": 0.2192,
+      "rsi_5": 42.9,
+      "vol_spike": 0.75
+    }
+  ],
   "blocked": [
     {
       "ticker": "AVGO",
