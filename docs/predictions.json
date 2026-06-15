@@ -1,36 +1,22 @@
 {
-  "generated_at": "2026-06-12T22:57:55Z",
-  "date": "2026-06-12",
+  "generated_at": "2026-06-15T23:17:30Z",
+  "date": "2026-06-15",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
-      "ticker": "MSFT",
-      "score": 0.5225,
-      "bounce_score": 0.65,
-      "sentiment_score": -0.1333,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Sharp pullback + Near BB low",
-      "ret_3d": -0.0314,
-      "ret_20d": -0.0436,
-      "rsi_5": 18.8,
-      "vol_spike": 0.92
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "score": 0.4954,
+      "ticker": "XOM",
+      "score": 0.5492,
       "bounce_score": 0.65,
       "sentiment_score": 0.0,
       "confidence": "LOW",
       "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0231,
-      "ret_20d": -0.1073,
-      "rsi_5": 24.9,
-      "vol_spike": 1.22
+      "signal": "RSI oversold + Sharp pullback + Near BB low",
+      "ret_3d": -0.0644,
+      "ret_20d": -0.1076,
+      "rsi_5": 20.9,
+      "vol_spike": 1.39
     }
   ],
   "shorts": [],
