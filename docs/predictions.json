@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-06-15T23:17:30Z",
-  "date": "2026-06-15",
+  "generated_at": "2026-06-16T23:05:02Z",
+  "date": "2026-06-16",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "XOM",
-      "score": 0.5492,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.0,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Sharp pullback + Near BB low",
-      "ret_3d": -0.0644,
-      "ret_20d": -0.1076,
-      "rsi_5": 20.9,
-      "vol_spike": 1.39
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
