@@ -1,9 +1,29 @@
 {
-  "generated_at": "2026-06-17T22:58:09Z",
-  "date": "2026-06-17",
+  "generated_at": "2026-06-18T23:18:32Z",
+  "date": "2026-06-18",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "IBM",
+      "score": 0.6051,
+      "bounce_score": 0.5,
+      "sentiment_score": 0.2273,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "RSI oversold + Sharp pullback",
+      "ret_3d": -0.073,
+      "ret_20d": 0.1071,
+      "rsi_5": 17.5,
+      "vol_spike": 1.27
+    }
+  ],
   "shorts": [],
-  "blocked": []
+  "blocked": [
+    {
+      "ticker": "ACN",
+      "reason": "-18.0% on 6.1x volume"
+    }
+  ]
 }
