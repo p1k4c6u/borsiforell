@@ -1,14 +1,33 @@
 {
-  "generated_at": "2026-06-25T22:55:50Z",
-  "date": "2026-06-25",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-06-26T22:45:36Z",
+  "date": "2026-06-26",
+  "stocks_analyzed": 47,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "score": 0.4925,
+      "bounce_score": 0.7,
+      "sentiment_score": 0.3077,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "Vol spike + Oversold bounce",
+      "ret_3d": -0.0061,
+      "ret_20d": -0.1508,
+      "rsi_5": 41.9,
+      "vol_spike": 3.96
+    }
+  ],
   "shorts": [],
   "blocked": [
     {
-      "ticker": "ACN",
-      "reason": "-18.0% on 6.1x volume"
+      "ticker": "MSFT",
+      "reason": "5.7% on 3.6x volume"
+    },
+    {
+      "ticker": "CAT",
+      "reason": "-5.6% on 3.5x volume"
     }
   ]
 }
