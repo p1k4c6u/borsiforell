@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-06-30T22:50:09Z",
-  "date": "2026-06-30",
+  "generated_at": "2026-07-01T22:47:05Z",
+  "date": "2026-07-01",
   "stocks_analyzed": 47,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "AVGO",
-      "score": 0.6374,
-      "bounce_score": 0.55,
-      "sentiment_score": 0.0741,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "Mixed signals",
-      "ret_3d": -0.0031,
-      "ret_20d": -0.1775,
-      "rsi_5": 46.2,
-      "vol_spike": 0.72
-    },
-    {
-      "rank": 2,
-      "ticker": "ACN",
-      "score": 0.4697,
-      "bounce_score": 0.85,
-      "sentiment_score": -0.0714,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.011,
-      "ret_20d": -0.367,
-      "rsi_5": 21.5,
-      "vol_spike": 0.93
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": [
     {
