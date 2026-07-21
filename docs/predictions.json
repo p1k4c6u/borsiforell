@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-20T22:30:27Z",
-  "date": "2026-07-20",
+  "generated_at": "2026-07-21T22:27:48Z",
+  "date": "2026-07-21",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
   "blocked": [
     {
-      "ticker": "IBM",
-      "reason": "-25.2% on 6.1x volume"
+      "ticker": "DHR",
+      "reason": "-11.0% on 4.6x volume"
     }
   ]
 }
