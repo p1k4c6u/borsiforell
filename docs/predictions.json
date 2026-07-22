@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T22:27:48Z",
-  "date": "2026-07-21",
+  "generated_at": "2026-07-22T22:33:29Z",
+  "date": "2026-07-22",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [],
@@ -8,7 +8,7 @@
   "blocked": [
     {
       "ticker": "DHR",
-      "reason": "-11.0% on 4.6x volume"
+      "reason": "-11.0% on 5.1x volume"
     }
   ]
 }
