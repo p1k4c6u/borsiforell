@@ -1,14 +1,24 @@
 {
-  "generated_at": "2026-08-05T22:34:48Z",
-  "date": "2026-08-05",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-08-07T01:03:33Z",
+  "date": "2026-08-07",
+  "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
-  "shorts": [],
-  "blocked": [
+  "buys": [
     {
-      "ticker": "MSFT",
-      "reason": "15.5% on 3.1x volume"
+      "rank": 1,
+      "ticker": "IBM",
+      "score": 0.6586,
+      "bounce_score": 0.55,
+      "sentiment_score": -0.1212,
+      "confidence": "HIGH",
+      "sector": "?",
+      "signal": "Strong momentum",
+      "ret_3d": 0.0315,
+      "ret_20d": -0.2095,
+      "rsi_5": 63.8,
+      "vol_spike": 0.22
     }
-  ]
+  ],
+  "shorts": [],
+  "blocked": []
 }
