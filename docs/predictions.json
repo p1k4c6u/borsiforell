@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-08-07T22:06:24Z",
-  "date": "2026-08-07",
+  "generated_at": "2026-08-10T22:07:17Z",
+  "date": "2026-08-10",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
       "ticker": "NEE",
-      "score": 0.5771,
+      "score": 0.5335,
       "bounce_score": 0.65,
       "sentiment_score": 0.5714,
-      "confidence": "MED",
+      "confidence": "LOW",
       "sector": "?",
       "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0292,
-      "ret_20d": -0.0376,
-      "rsi_5": 18.5,
-      "vol_spike": 0.61
+      "ret_3d": -0.0141,
+      "ret_20d": -0.0416,
+      "rsi_5": 19.9,
+      "vol_spike": 0.58
     }
   ],
   "shorts": [],
