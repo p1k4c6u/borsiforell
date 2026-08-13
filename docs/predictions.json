@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-08-12T22:10:31Z",
-  "date": "2026-08-12",
+  "generated_at": "2026-08-13T22:11:17Z",
+  "date": "2026-08-13",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [],
-  "shorts": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "score": 0.2215,
-      "bounce_score": 0.0,
-      "sentiment_score": 0.3077,
-      "confidence": "HIGH",
-      "sector": "?",
-      "signal": "Mixed signals",
-      "ret_3d": -0.0151,
-      "ret_20d": 0.2447,
-      "rsi_5": 62.4,
-      "vol_spike": 0.7
-    }
-  ],
+  "shorts": [],
   "blocked": []
 }
