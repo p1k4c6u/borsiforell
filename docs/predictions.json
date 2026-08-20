@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-19T21:51:18Z",
-  "date": "2026-08-19",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-08-20T21:54:01Z",
+  "date": "2026-08-20",
+  "stocks_analyzed": 47,
   "regime": "choppy",
   "buys": [],
   "shorts": [],
@@ -9,6 +9,10 @@
     {
       "ticker": "MRK",
       "reason": "12.6% on 3.4x volume"
+    },
+    {
+      "ticker": "WMT",
+      "reason": "-9.2% on 3.3x volume"
     }
   ]
 }
