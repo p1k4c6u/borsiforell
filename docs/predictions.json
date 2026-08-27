@@ -1,44 +1,26 @@
 {
-  "generated_at": "2026-08-25T21:53:35Z",
-  "date": "2026-08-25",
-  "stocks_analyzed": 47,
+  "generated_at": "2026-08-27T00:58:20Z",
+  "date": "2026-08-27",
+  "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
-      "ticker": "TXN",
-      "score": 0.596,
+      "ticker": "AVGO",
+      "score": 0.4982,
       "bounce_score": 0.65,
-      "sentiment_score": 0.15,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0209,
-      "ret_20d": -0.0566,
-      "rsi_5": 25.0,
-      "vol_spike": 0.65
-    },
-    {
-      "rank": 2,
-      "ticker": "HON",
-      "score": 0.4944,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.4516,
+      "sentiment_score": 0.1176,
       "confidence": "LOW",
       "sector": "?",
-      "signal": "RSI oversold + Vol squeeze + Near BB low",
-      "ret_3d": -0.0121,
-      "ret_20d": -0.1244,
-      "rsi_5": 18.8,
-      "vol_spike": 0.71
+      "signal": "RSI oversold + Sharp pullback + Oversold bounce",
+      "ret_3d": -0.0349,
+      "ret_20d": -0.0398,
+      "rsi_5": 17.1,
+      "vol_spike": 0.94
     }
   ],
   "shorts": [],
   "blocked": [
-    {
-      "ticker": "MRK",
-      "reason": "12.6% on 3.4x volume"
-    },
     {
       "ticker": "WMT",
       "reason": "-9.2% on 3.3x volume"
