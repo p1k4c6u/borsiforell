@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-09-07T23:39:30Z",
-  "date": "2026-09-07",
+  "generated_at": "2026-09-08T23:33:32Z",
+  "date": "2026-09-08",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "RTX",
-      "score": 0.546,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.3226,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0213,
-      "ret_20d": -0.0967,
-      "rsi_5": 19.1,
-      "vol_spike": 0.7
-    },
-    {
-      "rank": 2,
-      "ticker": "LLY",
-      "score": 0.5103,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.4762,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.0092,
-      "ret_20d": -0.0293,
-      "rsi_5": 21.1,
-      "vol_spike": 0.89
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
