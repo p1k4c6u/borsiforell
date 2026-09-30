@@ -1,38 +1,9 @@
 {
-  "generated_at": "2026-09-29T01:09:40Z",
-  "date": "2026-09-29",
+  "generated_at": "2026-09-30T00:40:54Z",
+  "date": "2026-09-30",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "NEE",
-      "score": 0.5106,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.4211,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Sharp pullback + Near BB low",
-      "ret_3d": -0.0401,
-      "ret_20d": -0.0817,
-      "rsi_5": 16.9,
-      "vol_spike": 1.37
-    },
-    {
-      "rank": 2,
-      "ticker": "PEP",
-      "score": 0.4687,
-      "bounce_score": 0.65,
-      "sentiment_score": 0.3478,
-      "confidence": "LOW",
-      "sector": "?",
-      "signal": "RSI oversold + Near BB low + Oversold bounce",
-      "ret_3d": -0.0195,
-      "ret_20d": -0.0695,
-      "rsi_5": 24.0,
-      "vol_spike": 0.75
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
