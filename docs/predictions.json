@@ -1,9 +1,38 @@
 {
-  "generated_at": "2026-10-03T00:37:44Z",
-  "date": "2026-10-03",
+  "generated_at": "2026-10-06T01:50:18Z",
+  "date": "2026-10-06",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "RTX",
+      "score": 0.5406,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.3667,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Sector strong + Oversold bounce",
+      "ret_3d": -0.0071,
+      "ret_20d": -0.082,
+      "rsi_5": 12.5,
+      "vol_spike": 0.85
+    },
+    {
+      "rank": 2,
+      "ticker": "PEP",
+      "score": 0.4844,
+      "bounce_score": 0.65,
+      "sentiment_score": -0.2917,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Sector strong + Oversold bounce",
+      "ret_3d": -0.0084,
+      "ret_20d": -0.087,
+      "rsi_5": 17.6,
+      "vol_spike": 0.94
+    }
+  ],
   "shorts": [],
   "blocked": [
     {
