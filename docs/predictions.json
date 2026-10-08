@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-07T00:55:18Z",
-  "date": "2026-10-07",
+  "generated_at": "2026-10-08T01:11:50Z",
+  "date": "2026-10-08",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
       "ticker": "JNJ",
-      "score": 0.5409,
+      "score": 0.5418,
       "bounce_score": 0.65,
       "sentiment_score": 0.25,
       "confidence": "LOW",
