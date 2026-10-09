@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-08T01:11:50Z",
-  "date": "2026-10-08",
+  "generated_at": "2026-10-09T01:20:41Z",
+  "date": "2026-10-09",
   "stocks_analyzed": 48,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
-      "ticker": "JNJ",
-      "score": 0.5418,
+      "ticker": "GS",
+      "score": 0.4841,
       "bounce_score": 0.65,
-      "sentiment_score": 0.25,
+      "sentiment_score": 0.2222,
       "confidence": "LOW",
       "sector": "?",
-      "signal": "RSI oversold + Sector strong + Near BB low",
-      "ret_3d": -0.015,
-      "ret_20d": -0.0533,
-      "rsi_5": 21.1,
-      "vol_spike": 0.84
+      "signal": "RSI oversold + Oversold bounce",
+      "ret_3d": -0.017,
+      "ret_20d": -0.1376,
+      "rsi_5": 23.1,
+      "vol_spike": 1.07
     }
   ],
   "shorts": [],
