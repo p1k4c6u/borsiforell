@@ -1,29 +1,38 @@
 {
-  "generated_at": "2026-10-09T01:20:41Z",
-  "date": "2026-10-09",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-10-10T01:07:26Z",
+  "date": "2026-10-10",
+  "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
       "ticker": "GS",
-      "score": 0.4841,
+      "score": 0.5107,
       "bounce_score": 0.65,
-      "sentiment_score": 0.2222,
+      "sentiment_score": 0.25,
       "confidence": "LOW",
       "sector": "?",
       "signal": "RSI oversold + Oversold bounce",
-      "ret_3d": -0.017,
-      "ret_20d": -0.1376,
-      "rsi_5": 23.1,
-      "vol_spike": 1.07
+      "ret_3d": -0.0122,
+      "ret_20d": -0.1345,
+      "rsi_5": 20.5,
+      "vol_spike": 0.78
+    },
+    {
+      "rank": 2,
+      "ticker": "DE",
+      "score": 0.5041,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.6316,
+      "confidence": "LOW",
+      "sector": "?",
+      "signal": "RSI oversold + Sharp pullback + Near BB low",
+      "ret_3d": -0.0434,
+      "ret_20d": -0.0351,
+      "rsi_5": 24.1,
+      "vol_spike": 1.1
     }
   ],
   "shorts": [],
-  "blocked": [
-    {
-      "ticker": "ACN",
-      "reason": "15.8% on 4.4x volume"
-    }
-  ]
+  "blocked": []
 }
