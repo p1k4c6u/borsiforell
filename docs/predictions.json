@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-10-15T23:45:29Z",
-  "date": "2026-10-15",
+  "generated_at": "2026-10-16T23:46:13Z",
+  "date": "2026-10-16",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "NVDA",
-      "score": 0.558,
-      "bounce_score": 0.65,
-      "sentiment_score": -0.35,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "RSI oversold + Sharp pullback + Near BB low",
-      "ret_3d": -0.0402,
-      "ret_20d": -0.0096,
-      "rsi_5": 19.5,
-      "vol_spike": 1.17
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": []
 }
