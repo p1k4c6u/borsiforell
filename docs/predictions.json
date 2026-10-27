@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-23T23:55:24Z",
-  "date": "2026-10-23",
+  "generated_at": "2026-10-27T00:41:02Z",
+  "date": "2026-10-27",
   "stocks_analyzed": 49,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
       "ticker": "CAT",
-      "score": 0.558,
+      "score": 0.5622,
       "bounce_score": 0.65,
-      "sentiment_score": 0.1333,
+      "sentiment_score": 0.0714,
       "confidence": "MED",
       "sector": "?",
       "signal": "RSI oversold + Sharp pullback + Near BB low",
@@ -21,9 +21,9 @@
     {
       "rank": 2,
       "ticker": "META",
-      "score": 0.5284,
+      "score": 0.4903,
       "bounce_score": 0.65,
-      "sentiment_score": -0.1667,
+      "sentiment_score": 0.2917,
       "confidence": "LOW",
       "sector": "?",
       "signal": "RSI oversold + Sharp pullback + Near BB low",
