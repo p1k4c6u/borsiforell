@@ -1,11 +1,30 @@
 {
-  "generated_at": "2026-10-30T01:16:07Z",
-  "date": "2026-10-30",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-10-31T00:57:43Z",
+  "date": "2026-10-31",
+  "stocks_analyzed": 47,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "CAT",
+      "score": 0.6538,
+      "bounce_score": 0.8,
+      "sentiment_score": -0.1364,
+      "confidence": "HIGH",
+      "sector": "?",
+      "signal": "Vol spike + RSI oversold + Sharp pullback",
+      "ret_3d": -0.0646,
+      "ret_20d": -0.2147,
+      "rsi_5": 19.1,
+      "vol_spike": 2.69
+    }
+  ],
   "shorts": [],
   "blocked": [
+    {
+      "ticker": "GOOGL",
+      "reason": "-12.6% on 4.5x volume"
+    },
     {
       "ticker": "BA",
       "reason": "-10.7% on 5.0x volume"
