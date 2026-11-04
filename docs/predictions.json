@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-03T03:00:22Z",
-  "date": "2026-11-03",
+  "generated_at": "2026-11-04T01:34:08Z",
+  "date": "2026-11-04",
   "stocks_analyzed": 47,
   "regime": "choppy",
   "buys": [
     {
       "rank": 1,
       "ticker": "CAT",
-      "score": 0.5869,
+      "score": 0.597,
       "bounce_score": 0.65,
       "sentiment_score": -0.1364,
       "confidence": "MED",
@@ -21,7 +21,7 @@
     {
       "rank": 2,
       "ticker": "META",
-      "score": 0.5853,
+      "score": 0.5811,
       "bounce_score": 0.65,
       "sentiment_score": -0.45,
       "confidence": "MED",
@@ -35,9 +35,9 @@
     {
       "rank": 3,
       "ticker": "NVDA",
-      "score": 0.5025,
+      "score": 0.5144,
       "bounce_score": 0.65,
-      "sentiment_score": 0.0,
+      "sentiment_score": 0.05,
       "confidence": "LOW",
       "sector": "?",
       "signal": "RSI oversold + Sharp pullback + Near BB low",
