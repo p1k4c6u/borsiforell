@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-11-17T04:05:19Z",
-  "date": "2026-11-17",
+  "generated_at": "2026-11-18T03:03:10Z",
+  "date": "2026-11-18",
   "stocks_analyzed": 49,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "NVDA",
+      "score": 0.5956,
+      "bounce_score": 0.7,
+      "sentiment_score": 0.6818,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "Vol spike + RSI oversold + Sector weak",
+      "ret_3d": -0.0646,
+      "ret_20d": -0.2818,
+      "rsi_5": 14.6,
+      "vol_spike": 1.69
+    }
+  ],
   "shorts": [],
   "blocked": []
 }
