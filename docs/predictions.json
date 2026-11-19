@@ -1,24 +1,14 @@
 {
-  "generated_at": "2026-11-18T03:03:10Z",
-  "date": "2026-11-18",
-  "stocks_analyzed": 49,
+  "generated_at": "2026-11-19T02:43:33Z",
+  "date": "2026-11-19",
+  "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "NVDA",
-      "score": 0.5956,
-      "bounce_score": 0.7,
-      "sentiment_score": 0.6818,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "Vol spike + RSI oversold + Sector weak",
-      "ret_3d": -0.0646,
-      "ret_20d": -0.2818,
-      "rsi_5": 14.6,
-      "vol_spike": 1.69
-    }
-  ],
+  "buys": [],
   "shorts": [],
-  "blocked": []
+  "blocked": [
+    {
+      "ticker": "UNH",
+      "reason": "-10.2% on 3.1x volume"
+    }
+  ]
 }
