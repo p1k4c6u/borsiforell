@@ -1,9 +1,24 @@
 {
-  "generated_at": "2026-11-24T05:26:36Z",
-  "date": "2026-11-24",
-  "stocks_analyzed": 48,
+  "generated_at": "2026-11-25T04:29:15Z",
+  "date": "2026-11-25",
+  "stocks_analyzed": 47,
   "regime": "choppy",
-  "buys": [],
+  "buys": [
+    {
+      "rank": 1,
+      "ticker": "PM",
+      "score": 0.5578,
+      "bounce_score": 0.65,
+      "sentiment_score": 0.4444,
+      "confidence": "MED",
+      "sector": "?",
+      "signal": "RSI oversold + Sector strong + Oversold bounce",
+      "ret_3d": -0.0133,
+      "ret_20d": -0.0921,
+      "rsi_5": 22.8,
+      "vol_spike": 1.17
+    }
+  ],
   "shorts": [],
   "blocked": [
     {
