@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-11-26T03:42:20Z",
-  "date": "2026-11-26",
+  "generated_at": "2026-11-27T03:43:29Z",
+  "date": "2026-11-27",
   "stocks_analyzed": 48,
   "regime": "choppy",
-  "buys": [
-    {
-      "rank": 1,
-      "ticker": "CAT",
-      "score": 0.6069,
-      "bounce_score": 0.55,
-      "sentiment_score": -0.0357,
-      "confidence": "MED",
-      "sector": "?",
-      "signal": "Sector strong + Strong momentum",
-      "ret_3d": 0.0651,
-      "ret_20d": -0.2379,
-      "rsi_5": 42.1,
-      "vol_spike": 0.88
-    }
-  ],
+  "buys": [],
   "shorts": [],
   "blocked": [
     {
